@@ -1,4 +1,6 @@
 <?php
+    require_once "models/usuario.php";
+
     class UsuarioController{
         public function login(){
          //require views formulário  
@@ -26,6 +28,13 @@
                     $erro = true;
                 }
 
+                else
+                {
+                    #verificar se já não tem um usuário cadastrado com o mesmo email.
+                    $usuario = new Usuarios (email: $_POST["email"]);
+
+                }
+
                 if(empty($_POST["email"]))
                 {
                     $msg[2] = "Email necessário";
@@ -40,6 +49,7 @@
                 #caso não tenha ocorrido erro
                 if(!$erro)
                 {
+                    $usuario = new Usuarios (0,$_POST["nome"],$_POST["celular"],$_POST["email"],$_POST["senha"]);
                     #cadastrar no banco de dados
                 }
             }
