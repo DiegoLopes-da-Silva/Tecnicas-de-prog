@@ -6,48 +6,40 @@
 
 <div class="content">
     <div class="container">
-        <form class="row g-3">
+        
+        <h1 style="margin-top:20px;margin-bottom:20px;"> Usuário </h1>
+    
+        <form class="row g-3" action="#" method="post">
         <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome">
         </div>
+
+        <!-- Ela não botou o md-6 no celular, só o 6, maaas como não mudou nada no teste efetivamente decidi deixar assim pra
+        quesito padronização. -->
         <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <label for="celular" class="form-label">Celular</label>
+            <input type="text" class="form-control" id="celular" name="celular">
         </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress2" class="form-label">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
+
+        <div class="col-md-6 text-danger"> <?php echo $msg[0] ?> </div>
+        <div class="col-md-6 text-danger"> <?php echo $msg[1] ?> </div>
+
         <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputCity">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
         </div>
-        <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
-            </select>
+
+        <div class="col-md-6">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha">
         </div>
-        <div class="col-md-2">
-            <label for="inputZip" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-        </div>
+        
+        <div class="col-md-6 text-danger"> <?php echo $msg[2] ?> </div>
+        <div class="col-md-6 text-danger"> <?php echo $msg[3] ?> </div>
+
         <div class="col-12">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-                Check me out
-            </label>
-            </div>
-        </div>
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
         </form>
     </div>

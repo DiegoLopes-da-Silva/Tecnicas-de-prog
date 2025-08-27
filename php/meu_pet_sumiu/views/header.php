@@ -30,7 +30,8 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                     <a class="nav-link" href="#">Criar conta</a>
+                    <!-- Utiliza o metodo "inserir" presente no UsuarioController pra redirecionar através da navbar (muito legal) -->
+                     <a class="nav-link" href="index.php?controle=UsuarioController&metodo=inserir">Criar conta</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Login</a>
@@ -40,7 +41,3 @@
         </div>
     </nav>
         <!-- Fim navbar bootstrap -->
-<!--
-    <a href="index.php?controle=ProdutoController&metodo=listar">Listar Produtos</a>
-    <a href="index.php?controle=UsuarioController&metodo=login">Login</a>
--->
