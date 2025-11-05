@@ -6,19 +6,16 @@ require_once "servico.class.php";
 require_once "itens.class.php";
 require_once "agenda.class.php";
 
-// Criando Cliente
 $cliente = new Cliente();
 $cliente->setNome("João Silva");
 $cliente->setCelular("(11) 98246-2561");
-$cliente->setCpf("123.456.789-00");
+$cliente->setCpf("153.758.789-00");
 
-// Criando Prestador
 $prestador = new Prestador();
 $prestador->setNome("Carlos Souza");
 $prestador->setCelular("(11) 99924-4674");
 $prestador->setEspecialidade("Corte Masculino");
 
-// Criando Serviços
 $servico1 = new Servico();
 $servico1->setDescritivo("Corte de cabelo");
 $servico1->setPreco(35.00);
@@ -27,7 +24,6 @@ $servico2 = new Servico();
 $servico2->setDescritivo("Barba completa");
 $servico2->setPreco(20.00);
 
-// Criando Itens
 $item1 = new Itens();
 $item1->setHorario("10:00");
 $item1->setStatus("Ativo");
@@ -38,14 +34,12 @@ $item2->setHorario("10:45");
 $item2->setStatus("Ativo");
 $item2->setServico($servico2);
 
-// Criando Agenda
 $agenda = new Agenda();
 $agenda->setData("04/11/2025");
 $agenda->setCliente($cliente);
 $agenda->setPrestador($prestador);
 $agenda->setItens([$item1, $item2]);
 
-// Exibindo os dados
 echo "<h2>Agenda do Dia: " . $agenda->getData() . "</h2>";
 
 echo "<h3>Cliente:</h3>";
