@@ -8,6 +8,7 @@ class Agenda {
         #Esses que não tem private ou protected na frente são parametros vindo de OUTRO (nesse caso itens)
         string $horario,
         string $status,
+        $cliente = null,
         $serviço = null,
         $agenda = null,
         $prestador = null
